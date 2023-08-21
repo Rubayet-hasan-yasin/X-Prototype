@@ -1,4 +1,5 @@
 import File_input from "./File_input";
+import ManualForm from "./ManualForm";
 import ToggleButton from "./ToggleButton";
 
 const Form = () => {
@@ -41,6 +42,9 @@ const Form = () => {
                             {/* Manually insert data  */}
                             {/* Toggle Switch */}
                             <ToggleButton/>
+
+                            {/* Manual form  */}
+                            <ManualForm/>
                             
 
 
