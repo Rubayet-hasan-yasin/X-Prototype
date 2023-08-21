@@ -1,5 +1,24 @@
+import papa from 'papaparse'
+import { useState } from 'react';
+
 
 const File_input = () => {
+  const [data, setData] = useState([])
+
+  const handleFileUpload = e => {
+    const file = e.target.files[0];
+
+    papa.parse(file,{
+      header: true,
+      complete: (results)=>{
+        setData(results.data);
+      }
+    })
+
+  }
+
+  console.log(data);
+
     return (
         <div className=' p-4 bg-white w-full  m-auto rounded-lg'>
               <div className='file_upload px-5 py-3 relative border-4 border-dotted border-gray-300 rounded-lg'>
@@ -10,6 +29,7 @@ const File_input = () => {
                       className='text-sm cursor-pointer w-36 hidden'
                       type='file'
                       name='CSVfile'
+                      onChange={handleFileUpload}
                       id=''
                       accept='.csv'
                       hidden
