@@ -2,7 +2,7 @@ import File_input from "./File_input";
 import ManualForm from "./ManualForm";
 import ToggleButton from "./ToggleButton";
 
-const Form = () => {
+const Form = ({toggle, setToggle}) => {
     return (
         <div className="relative md:w-1/2 py-3 sm:max-w-xl sm:mx-auto">
             <div
@@ -41,10 +41,16 @@ const Form = () => {
 
                             {/* Manually insert data  */}
                             {/* Toggle Switch */}
-                            <ToggleButton/>
+                            <ToggleButton 
+                            toggle={toggle}
+                            setToggle={setToggle}
+                            />
 
                             {/* Manual form  */}
-                            <ManualForm/>
+                            {
+                                toggle && 
+                                <ManualForm/>
+                            }
                             
 
 
