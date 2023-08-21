@@ -9,9 +9,9 @@ const File_input = () => {
                       
                       className='text-sm cursor-pointer w-36 hidden'
                       type='file'
-                      name='image'
-                      id='image'
-                      accept='image/*'
+                      name='CSVfile'
+                      id=''
+                      accept='.csv'
                       hidden
                     />
                     <div className='bg-blue-400 text-white border border-gray-300 rounded font-semibold cursor-pointer p-1 px-3 hover:bg-blue-700'>

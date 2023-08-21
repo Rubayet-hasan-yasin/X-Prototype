@@ -4,8 +4,9 @@ import Navbar from "./components/Navbar";
 
 const Home = () => {
     const [toggle, setToggle] = useState(false);
+    const [dataField, setDataField] = useState(false);
 
-    console.log()
+    console.log(dataField)
     return (
         <div className="">
             <Navbar />
@@ -15,6 +16,8 @@ const Home = () => {
                 <Form 
                 toggle={toggle}
                 setToggle={setToggle}
+                setDataField={setDataField}
+                dataField={dataField}
                 />
             </div>
 
