@@ -32,7 +32,7 @@ const Home = () => {
 
             {
                 data.length && 
-                <div className="h-screen p-10 bg-[#161616] grid items-center">
+                <div className="h-screen p-10 grid items-center">
 
                     <Table 
                     formData={formData}
