@@ -14,6 +14,26 @@ const Form = ({ toggle, setToggle, setDataField, dataField, setData, setFormData
         const contractor = form.contractor.value;
 
 
+        const maxX = form.maxX?.value;
+        const minX = form.minX?.value;
+        const maxY = form.maxY?.value;
+        const minY = form.minY?.value;
+        const maxZ = form.maxZ?.value;
+        const minZ = form.minZ?.value;
+
+        const manualData = [
+            {KP: '0', X: maxX, Y: maxY, Z: maxZ},
+            {KP: '1', X: minX, Y: minY, Z: minZ}
+        ];
+
+
+
+        if(maxX && maxY && maxZ && minZ && minX && minY){
+            setData(manualData)
+        }
+
+        console.log(maxX, maxY, maxZ, minX, minY, minZ);
+
         if (projectName && projectDescription && client && contractor) {
             const userinput = {projectName, projectDescription, client, contractor}
             setFormData(userinput);
