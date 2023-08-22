@@ -2,7 +2,7 @@ import File_input from "./File_input";
 import ManualForm from "./ManualForm";
 import ToggleButton from "./ToggleButton";
 
-const Form = ({ toggle, setToggle, setDataField, dataField }) => {
+const Form = ({ toggle, setToggle, setDataField, dataField, setData, setFormData }) => {
 
     const handleFormSubmit = event => {
         event.preventDefault()
@@ -15,6 +15,8 @@ const Form = ({ toggle, setToggle, setDataField, dataField }) => {
 
 
         if (projectName && projectDescription && client && contractor) {
+            const userinput = {projectName, projectDescription, client, contractor}
+            setFormData(userinput);
             setDataField(true);
         }
         else {
@@ -63,7 +65,9 @@ const Form = ({ toggle, setToggle, setDataField, dataField }) => {
                                 dataField &&
                                 <div>
                                 {/* CSV file input  */}
-                                <File_input />
+                                <File_input 
+                                setData={setData}
+                                />
 
                                 {/* Manually insert data  */}
                                 {/* Toggle Switch */}

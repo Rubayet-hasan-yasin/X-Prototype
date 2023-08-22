@@ -1,9 +1,8 @@
 import papa from 'papaparse'
-import { useState } from 'react';
 
 
-const File_input = () => {
-  const [data, setData] = useState([])
+const File_input = ({setData}) => {
+  
 
   const handleFileUpload = e => {
     const file = e.target.files[0];
@@ -16,8 +15,6 @@ const File_input = () => {
     })
 
   }
-
-  console.log(data);
 
     return (
         <div className=' p-4 bg-white w-full  m-auto rounded-lg'>
