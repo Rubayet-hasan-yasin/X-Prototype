@@ -54,7 +54,7 @@ const Form = ({ toggle, setToggle, setDataField, dataField, setData, setFormData
             <div className="relative px-4 py-10 bg-white shadow-lg sm:rounded-3xl sm:p-20">
                 <div className="max-w-md mx-auto">
                     <div>
-                        <h1 className="text-2xl font-semibold mb-10">XYZ Engine</h1>
+                        <h1 className="text-3xl font-bold mb-10 text-center">XYZ Engine</h1>
                     </div>
                     <div className="divide-y divide-gray-200">
                         <form onSubmit={handleFormSubmit}>
