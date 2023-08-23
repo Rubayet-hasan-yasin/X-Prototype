@@ -15,7 +15,7 @@ const Table = ({ formData, data }) => {
 
 
     return (
-        <div className='w-1/2 mx-auto text-gray-900 text-center'>
+        <div className='w-1/2 mx-auto text-black text-center'>
             <div ref={ref}>
                 <p className='text-xl font-semibold text-center'>projectName: {formData.projectName}</p>
                 <p className='text-xl font-semibold text-center'>Description: {formData.projectDescription}</p>
